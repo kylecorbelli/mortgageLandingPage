@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+    
+    <!--
+    
+    GitHub documentation: 
+    
+    -Kyle Corbelli
+    
+    -->
+    
     <?PHP
         include 'include/head.php';
         include 'include/connection.php';
@@ -109,6 +118,14 @@
                             <h2>Last Name:</h2>
                             <input class='form-control' type='text' name='Last-Name' />
                         </div> <!-- END Last Name Input -->
+                        <div> <!-- Email Input -->
+                            <h2>Email:</h2>
+                            <input class='form-control' type='email' name='Email' />
+                        </div> <!-- END Email Input -->
+                        <div> <!-- Phone Input -->
+                            <h2>Phone:</h2>
+                            <input class='form-control' type='tel' name='Phone' />
+                        </div> <!-- END Phone Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
             </div>
