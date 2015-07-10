@@ -7,29 +7,37 @@
     <body>
         <div id='page-wrapper' class='container-fluid'>
             <div class='row'>
-                <div class='col-med-12'>
-                    <?PHP
-                        $columnsQuery = "
-                            SHOW COLUMNS
-                            FROM `Leads`
-                        ";
-                        $entriesQuery = "
-                            SELECT *
-                            FROM `Leads`
-                            ORDER BY `ID`
-                        ";
-                        $columns = mysql_query($columnsQuery);
-                        $result = mysql_query($entriesQuery);
-                        echo "<table class='table table-striped'><thead><tr>";
-                        while($columnHead = mysql_fetch_array($columns)) {
-                            echo '<th>' . $columnHead['Field'] . '</th>';
-                        }
-                        echo '</tr></thead><tbody>';
-                        while($entry = mysql_fetch_array($result)) {
-                            echo '<tr><td>' . $entry['ID'] . '</td><td>' . $entry['Date Added'] . '</td><td>' . $entry['Zip Code'] . '</td><td>' . $entry['Estimated Credit'] . '</td><td>' . $entry['Property Type'] . '</td><td>' . $entry['Estimated Property Value'] . '</td><td>' . $entry['Approximate Mortgage Balance'] . '</td><td>' . $entry['Current Mortgage Rate'] . '</td><td>' . $entry['Reason for Refinance'] . '</td><td>' . $entry['VA Eligibly'] . '</td><td>' . $entry['First Name'] . '</td><td>' . $entry['Last Name'] . '</td><td>' . $entry['Email'] . '</td><td>' . $entry['Phone'] . '</td><td>' . $entry['Subject Address'] . '</td></tr>';
-                        }
-                        echo '</tbody></table>';
-                    ?>
+                <div class='col-sm-4 col-sm-push-4'>
+                    <div class='well'>
+                        <div> <!-- Mortgage Goal Input -->
+                            <h2>Your Mortgage Goal:</h2>
+                            <h4>(Check all that apply)</h4>
+                            <div class='row checkbox'>
+                                <div class='col-sm-6'>
+                                    <label>
+                                        <input name='refinanceReason' type='checkbox' /> Lower Monthly Payment
+                                    </label>
+                                </div>
+                                <div class='col-sm-6'>
+                                    <label>
+                                        <input name='refinanceReason' type='checkbox' /> Debt Consolidation
+                                    </label>
+                                </div>
+                            </div>
+                            <div class='row checkbox'>
+                                <div class='col-sm-6'>
+                                    <label>
+                                        <input name='refinanceReason' type='checkbox' /> Shorten Loan Term
+                                    </label>
+                                </div>
+                                <div class='col-sm-6'>
+                                    <label>
+                                        <input name='refinanceReason' type='checkbox' /> Cash Out Refinance
+                                    </label>
+                                </div>
+                            </div>
+                        </div> <!-- END Mortgage Goal Input -->
+                    </div> <!-- END Well that holds all inputs -->
                 </div>
             </div>
         </div>
