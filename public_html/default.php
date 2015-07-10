@@ -70,7 +70,7 @@
                             <label for='Property-Value'><h2>Estimated Property Value:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Property-Value' class='form-control' type='number' name='Property-Value'/>
+                                <input id='Property-Value' class='form-control numberToComma' type='number' name='Property-Value'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Property Value Input -->
@@ -78,7 +78,7 @@
                             <label for='Loan-Balance'><h2>Approximate Mortgage Balance:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Loan-Balance' class='form-control' type='number' name='Loan-Balance'/>
+                                <input id='Loan-Balance' class='form-control numberToComma' type='number' name='Loan-Balance'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Mortgage Balance Input -->
@@ -86,7 +86,7 @@
                             <label for='Cash-Out'><h2>Desired Cash Out</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Cash-Out' class='form-control' type='number' name='Cash-Out'/>
+                                <input id='Cash-Out' class='form-control numberToComma' type='number' name='Cash-Out'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Cash Out Input -->
