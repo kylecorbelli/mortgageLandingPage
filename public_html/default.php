@@ -63,12 +63,44 @@
                         </div> <!-- END Occupancy Input -->
                         <div class> <!-- Property Value Input -->
                             <h2>Estimated Property Value</h2>
-                            <input class='form-control' type='text' name='Property-Value'/>
+                            <input class='form-control' type='number' name='Property-Value'/>
                         </div> <!-- END Property Value Input -->
-                        <div class> <!-- Laon Balance Input -->
-                            <h2>Approximate Loan Balance</h2>
-                            <input class='form-control' type='text' name='Loan-Balance'/>
-                        </div> <!-- Loan Balance Input -->
+                        <div class> <!-- Mortgage Balance Input -->
+                            <h2>Approximate Mortgage Balance</h2>
+                            <input class='form-control' type='number' name='Loan-Balance'/>
+                        </div> <!-- END Mortgage Balance Input -->
+                        <div class> <!-- Current Rate Input -->
+                            <h2>Approximate Mortgage Balance</h2>
+                            <input class='form-control' type='number' name='first-mortgage-rate'/>
+                        </div> <!-- ENDCurrent Rate Input -->
+                        <div> <!-- VA Eligibility Input -->
+                            <h2>Are You a Veteran?</h2>
+                            <div class='form-group'>
+                                <div class='radio'>
+                                    <label>
+                                        <input type='radio' name='VA-Eligible' value='Yes' /> Yes
+                                    </label>
+                                </div>
+                                <div class='radio'>
+                                    <label>
+                                        <input type='radio' name='VA-Eligible' value='No' /> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div> <!-- END VA Eligibility Input -->
+                        <div> <!-- Credit Input -->
+                            <h2>How is Your Credit?</h2>
+                            <div class='row'>
+                                <select class='form-control'>
+                                    <option hidden disable selected>-Select One-</option>
+                                    <option value='Excellent-720-or-Above'>Excellent (720 or Above)</option>
+                                    <option value='Good-660-719'>Good (660 - 719)</option>
+                                    <option value='Average-620-659'>Average (620 - 659)</option>
+                                    <option value='Below-Average-580-619'>Below Average (580 - 619)</option>
+                                    <option value='Poor-579-and-Below'>Poor (579 and Below)</option>
+                                </select>
+                            </div>
+                        </div> <!-- END Credit Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
             </div>
