@@ -70,25 +70,19 @@
                                 </select>
                             </div>
                         </div> <!-- END Occupancy Input -->
-                        <div class> <!-- Property Value Input -->
-                            <label>
-                                <h2>Estimated Property Value</h2>
-                                <input class='form-control' type='number' name='Property-Value'/>
-                            </label>
+                        <div class='form-group'> <!-- Property Value Input -->
+                            <label for='Property-Value'><h2>Estimated Property Value:</h2></label>
+                            <input id='Property-Value' class='form-control' type='number' name='Property-Value'/>
                         </div> <!-- END Property Value Input -->
-                        <div class> <!-- Mortgage Balance Input -->
-                            <label>
-                                <h2>Approximate Mortgage Balance</h2>
-                                <input class='form-control' type='number' name='Loan-Balance'/>
-                            </label>
+                        <div class='form-group'> <!-- Mortgage Balance Input -->
+                            <label for='Loan-Balance'><h2>Approximate Mortgage Balance:</h2></label>
+                            <input class='form-control' type='number' id='Loan-Balance' name='Loan-Balance'/>
                         </div> <!-- END Mortgage Balance Input -->
-                        <div class> <!-- Cash Out Input -->
-                            <label>
-                                <h2>Desired Cash Out</h2>
-                                <input class='form-control' type='number' name='Cash-Out'/>
-                            </label>
+                        <div class='form-group'> <!-- Cash Out Input -->
+                            <label for='Cash-Out'><h2>Desired Cash Out</h2></label>
+                            <input id='Cash-Out' class='form-control' type='number' name='Cash-Out'/>
                         </div> <!-- END Cash Out Input -->
-                        <div class> <!-- Current Rate Input -->
+                        <div class='form-group'> <!-- Current Rate Input -->
                             <label>
                                 <h2>First Mortgage Interest Rate</h2>
                                 <input class='form-control' type='number' name='First-Mortgage-Rate'/>
