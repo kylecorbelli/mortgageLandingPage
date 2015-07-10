@@ -71,7 +71,7 @@
                         </div> <!-- END Mortgage Balance Input -->
                         <div class> <!-- Current Rate Input -->
                             <h2>Approximate Mortgage Balance</h2>
-                            <input class='form-control' type='number' name='first-mortgage-rate'/>
+                            <input class='form-control' type='number' name='First-Mortgage-Rate'/>
                         </div> <!-- ENDCurrent Rate Input -->
                         <div> <!-- VA Eligibility Input -->
                             <h2>Are You a Veteran?</h2>
@@ -101,6 +101,14 @@
                                 </select>
                             </div>
                         </div> <!-- END Credit Input -->
+                        <div> <!-- First Name Input -->
+                            <h2>First Name:</h2>
+                            <input class='form-control' type='text' name='First-Name' />
+                        </div> <!-- END First Name Input -->
+                        <div> <!-- Last Name Input -->
+                            <h2>Last Name:</h2>
+                            <input class='form-control' type='text' name='Last-Name' />
+                        </div> <!-- END Last Name Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
             </div>
