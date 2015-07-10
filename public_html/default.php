@@ -71,6 +71,7 @@
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
                                 <input id='Property-Value' class='form-control' type='number' name='Property-Value'/>
+                                <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Property Value Input -->
                         <div class='form-group'> <!-- Mortgage Balance Input -->
@@ -78,15 +79,23 @@
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
                                 <input id='Loan-Balance' class='form-control' type='number' name='Loan-Balance'/>
+                                <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Mortgage Balance Input -->
                         <div class='form-group'> <!-- Cash Out Input -->
                             <label for='Cash-Out'><h2>Desired Cash Out</h2></label>
-                            <input id='Cash-Out' class='form-control' type='number' name='Cash-Out'/>
+                            <div class='input-group'>
+                                <span class='input-group-addon'>$</span>
+                                <input id='Cash-Out' class='form-control' type='number' name='Cash-Out'/>
+                                <span class='input-group-addon'>.00</span>
+                            </div>
                         </div> <!-- END Cash Out Input -->
                         <div class='form-group'> <!-- Current Rate Input -->
                             <label for='First-Mortgage-Rate'><h2>First Mortgage Interest Rate</h2></label>
-                            <input id='First-Mortgage-Rate' class='form-control' type='number' name='First-Mortgage-Rate'/>
+                            <div class='input-group'>
+                                <input id='First-Mortgage-Rate' class='form-control' type='number' name='First-Mortgage-Rate'/>
+                                <span class='input-group-addon'>%</span>
+                            </div>
                         </div> <!-- ENDCurrent Rate Input -->
                         <div class='form-group'> <!-- VA Eligibility Input -->
                             <h2>Are You a Veteran?</h2>
@@ -124,11 +133,17 @@
                         </div> <!-- END Last Name Input -->
                         <div class='form-group'> <!-- Email Input -->
                             <label for='Email'><h2>Email:</h2></label>
-                            <input id='Email' class='form-control' type='email' name='Email' />
+                            <div class='input-group'>
+                                <span class='input-group-addon'><span class='glyphicon glyphicon-envelope'></span></span>
+                                <input id='Email' class='form-control' type='email' name='Email' />
+                            </div>
                         </div> <!-- END Email Input -->
                         <div class='form-group'> <!-- Phone Input -->
                             <label for='Phone'><h2>Phone:</h2></label>
+                            <div class='input-group'>
+                                <span class='input-group-addon'><span class='glyphicon glyphicon-phone'></span></span>
                             <input id='Phone' class='form-control' type='tel' name='Phone' />
+                            </div>
                         </div> <!-- END Phone Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
