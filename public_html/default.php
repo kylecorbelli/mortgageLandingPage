@@ -3,7 +3,7 @@
     
     <!--
     
-    GitHub documentation: 
+    GitHub documentation: https://github.com/pacificLiving/mortgageLandingPage/tree/master/public_html
     
     -Kyle Corbelli
     
@@ -71,16 +71,28 @@
                             </div>
                         </div> <!-- END Occupancy Input -->
                         <div class> <!-- Property Value Input -->
-                            <h2>Estimated Property Value</h2>
-                            <input class='form-control' type='number' name='Property-Value'/>
+                            <label>
+                                <h2>Estimated Property Value</h2>
+                                <input class='form-control' type='number' name='Property-Value'/>
+                            </label>
                         </div> <!-- END Property Value Input -->
                         <div class> <!-- Mortgage Balance Input -->
-                            <h2>Approximate Mortgage Balance</h2>
-                            <input class='form-control' type='number' name='Loan-Balance'/>
+                            <label>
+                                <h2>Approximate Mortgage Balance</h2>
+                                <input class='form-control' type='number' name='Loan-Balance'/>
+                            </label>
                         </div> <!-- END Mortgage Balance Input -->
+                        <div class> <!-- Cash Out Input -->
+                            <label>
+                                <h2>Desired Cash Out</h2>
+                                <input class='form-control' type='number' name='Cash-Out'/>
+                            </label>
+                        </div> <!-- END Cash Out Input -->
                         <div class> <!-- Current Rate Input -->
-                            <h2>Approximate Mortgage Balance</h2>
-                            <input class='form-control' type='number' name='First-Mortgage-Rate'/>
+                            <label>
+                                <h2>First Mortgage Interest Rate</h2>
+                                <input class='form-control' type='number' name='First-Mortgage-Rate'/>
+                            </label>
                         </div> <!-- ENDCurrent Rate Input -->
                         <div> <!-- VA Eligibility Input -->
                             <h2>Are You a Veteran?</h2>
@@ -111,20 +123,28 @@
                             </div>
                         </div> <!-- END Credit Input -->
                         <div> <!-- First Name Input -->
-                            <h2>First Name:</h2>
-                            <input class='form-control' type='text' name='First-Name' />
+                            <label>
+                                <h2>First Name:</h2>
+                                <input class='form-control' type='text' name='First-Name' />
+                            </label>
                         </div> <!-- END First Name Input -->
                         <div> <!-- Last Name Input -->
-                            <h2>Last Name:</h2>
-                            <input class='form-control' type='text' name='Last-Name' />
+                            <label>
+                                <h2>Last Name:</h2>
+                                <input class='form-control' type='text' name='Last-Name' />
+                            </label>
                         </div> <!-- END Last Name Input -->
                         <div> <!-- Email Input -->
-                            <h2>Email:</h2>
-                            <input class='form-control' type='email' name='Email' />
+                            <label>
+                                <h2>Email:</h2>
+                                <input class='form-control' type='email' name='Email' />
+                            </label>
                         </div> <!-- END Email Input -->
                         <div> <!-- Phone Input -->
-                            <h2>Phone:</h2>
-                            <input class='form-control' type='tel' name='Phone' />
+                            <label>
+                                <h2>Phone:</h2>
+                                <input class='form-control' type='tel' name='Phone' />
+                            </label>
                         </div> <!-- END Phone Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
