@@ -61,6 +61,14 @@
                                 </select>
                             </div>
                         </div> <!-- END Occupancy Input -->
+                        <div class> <!-- Property Value Input -->
+                            <h2>Estimated Property Value</h2>
+                            <input class='form-control' type='text' name='Property-Value'/>
+                        </div> <!-- END Property Value Input -->
+                        <div class> <!-- Laon Balance Input -->
+                            <h2>Approximate Loan Balance</h2>
+                            <input class='form-control' type='text' name='Loan-Balance'/>
+                        </div> <!-- Loan Balance Input -->
                     </div> <!-- END Well that holds all inputs -->
                 </div>
             </div>
