@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <?PHP
-        include 'include/head.html';
+        include 'include/head.php';
     ?>
     <body>
         <div id='page-wrapper'></div>
