@@ -8,4 +8,13 @@ $('.numberToComma').on('keyup', function() {
   this.value = formattedText; // Replaces the input field's value with the newly-formatted string.
 });
 
+// Adds error styling if the user has focused on and then skipped a required input
+$('.requiredInput').on('blur', function() {
+  if(!this.value) {
+    $(this).parent().parent().addClass('has-error');
+  } else {
+    $(this).parent().parent().removeClass('has-error');
+  }
+})
+
 });
