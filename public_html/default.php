@@ -70,7 +70,7 @@
                             <label for='Property-Value'><h2>Estimated Property Value:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Property-Value' class='form-control numberToComma' type='text' name='Property-Value'/>
+                                <input id='Property-Value' class='form-control numberToComma requiredInput' type='text' name='Property-Value'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Property Value Input -->
@@ -78,22 +78,22 @@
                             <label for='Loan-Balance'><h2>Approximate Mortgage Balance:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Loan-Balance' class='form-control numberToComma' type='text' name='Loan-Balance'/>
+                                <input id='Loan-Balance' class='form-control numberToComma requiredInput' type='text' name='Loan-Balance'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Mortgage Balance Input -->
-                        <div class='form-group'> <!-- Cash Out Input -->
+                        <div class='form-group requiredInput'> <!-- Cash Out Input -->
                             <label for='Cash-Out'><h2>Desired Cash Out</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'>$</span>
-                                <input id='Cash-Out' class='form-control numberToComma' type='text' name='Cash-Out'/>
+                                <input id='Cash-Out' class='form-control numberToComma requiredInput' type='text' name='Cash-Out'/>
                                 <span class='input-group-addon'>.00</span>
                             </div>
                         </div> <!-- END Cash Out Input -->
                         <div class='form-group'> <!-- Current Rate Input -->
                             <label for='First-Mortgage-Rate'><h2>First Mortgage Interest Rate</h2></label>
                             <div class='input-group'>
-                                <input id='First-Mortgage-Rate' class='form-control' type='number' name='First-Mortgage-Rate'/>
+                                <input id='First-Mortgage-Rate' class='form-control requiredInput' type='number' name='First-Mortgage-Rate'/>
                                 <span class='input-group-addon'>%</span>
                             </div>
                         </div> <!-- ENDCurrent Rate Input -->
@@ -125,24 +125,24 @@
                         </div> <!-- END Credit Input -->
                         <div class='form-group'> <!-- First Name Input -->
                             <label for='First-Name'><h2>First Name:</h2></label>
-                            <input id='First-Name' class='form-control' type='text' name='First-Name' />
+                            <input id='First-Name' class='form-control requiredInput' type='text' name='First-Name' />
                         </div> <!-- END First Name Input -->
                         <div class='form-group'> <!-- Last Name Input -->
                             <label for='Last-Name'><h2>Last Name:</h2></label>
-                            <input id='Last-Name' class='form-control' type='text' name='Last-Name' />
+                            <input id='Last-Name' class='form-control requiredInput' type='text' name='Last-Name' />
                         </div> <!-- END Last Name Input -->
                         <div class='form-group'> <!-- Email Input -->
                             <label for='Email'><h2>Email:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'><span class='glyphicon glyphicon-envelope'></span></span>
-                                <input id='Email' class='form-control' type='email' name='Email' />
+                                <input id='Email' class='form-control requiredInput' type='email' name='Email' />
                             </div>
                         </div> <!-- END Email Input -->
                         <div class='form-group'> <!-- Phone Input -->
                             <label for='Phone'><h2>Phone:</h2></label>
                             <div class='input-group'>
                                 <span class='input-group-addon'><span class='glyphicon glyphicon-phone'></span></span>
-                            <input id='Phone' class='form-control' type='tel' name='Phone' />
+                                <input id='Phone' class='form-control requiredInput' type='tel' name='Phone' />
                             </div>
                         </div> <!-- END Phone Input -->
                     </div> <!-- END Well that holds all inputs -->
