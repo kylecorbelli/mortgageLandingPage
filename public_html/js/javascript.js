@@ -18,10 +18,23 @@ $('.requiredInput').on('blur', function() {
 })
 
 $('input').on('change', function() {
+  var inputType = $(this).attr('type');
+  switch(inputType) {
+    case 'number':
+    case 'text':
+    case 'email':
+    case 'tel':
+      var storageKey = $(this).attr('id');
+      var storageValue = $(this).val();
+      sessionStorage.setItem(storageKey, storageValue);
+      break;
+  }
+});
+
+$('select').on('change', function() {
   var storageKey = $(this).attr('id');
   var storageValue = $(this).val();
-  alert('The storage key is ' + storageKey + ' and the storage value is ' + storageValue);
   sessionStorage.setItem(storageKey, storageValue);
-});
+})
 
 });
