@@ -17,7 +17,6 @@ $('.requiredInput').on('blur', function() {
   }
 })
 
-
 // Sets user input to session storage 
 $('input').on('change', function() {
   var inputType = $(this).attr('type');
@@ -49,27 +48,10 @@ $('select').on('change', function() {
   sessionStorage.setItem(storageKey, storageValue);
 })
 
-
-// The below sections were used to test the storage of session variables:
-
-var sessMsg = '';
-
-// Loops through all set session keys
-for(var i = 0; i < sessionStorage.length; i++) {
-  sessMsg += 'Key/Val ' + i + ': ' + sessionStorage.key(i) + ': ' + sessionStorage.getItem(sessionStorage.key(i)) + '. ';
+// Autopopulate fields from session storage
+for(i = 0; i < sessionStorage.length; i++) {
+  var id = sessionStorage.key(i);
+  $('#' + id ).val(sessionStorage.getItem(id));
 }
-
-alert(sessMsg);
-
-/*
-// Loop through the key value 'refinanceReason' specifically
-var refiMsg = '';
-
-var refiArray = JSON.parse(sessionStorage.getItem('refinanceReason'));
-alert(refiArray);
-for(var i = 0; i < refiArray.length; i++) {
-  alert(refiArray[i]);
-}
-*/
 
 });
