@@ -15,7 +15,7 @@ $('.requiredInput').on('blur', function() {
   } else {
     $(this).parent().parent().removeClass('has-error');
   }
-})
+});
 
 // Sets user input to session storage 
 $('input').on('change', function() {
@@ -46,12 +46,17 @@ $('select').on('change', function() {
   var storageKey = $(this).attr('id');
   var storageValue = $(this).val();
   sessionStorage.setItem(storageKey, storageValue);
-})
+});
+
+var msg = '';
 
 // Autopopulate fields from session storage
 for(i = 0; i < sessionStorage.length; i++) {
   var id = sessionStorage.key(i);
-  $('#' + id ).val(sessionStorage.getItem(id));
+  $('#' + id).val(sessionStorage.getItem(id));
+  msg += 'Key ' + i + ': ' + id + ', Value ' + i + ': ' + sessionStorage.getItem(id) + '. ';
 }
+
+alert(msg);
 
 });
