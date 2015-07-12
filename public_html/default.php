@@ -102,12 +102,12 @@
                             <div class='form-group'>
                                 <div class='radio'>
                                     <label>
-                                        <input type='radio' name='VA-Eligible' value='Yes' /> Yes
+                                        <input id='VA-Yes' type='radio' name='VA-Eligible' value='Yes' /> Yes
                                     </label>
                                 </div>
                                 <div class='radio'>
                                     <label>
-                                        <input type='radio' name='VA-Eligible' value='No' /> No
+                                        <input id='VA-No' type='radio' name='VA-Eligible' value='No' /> No
                                     </label>
                                 </div>
                             </div>
