@@ -16,7 +16,7 @@
     <body>
         <div id='page-wrapper' class='container-fluid'>
             <div class='row'>
-                <div class='col-sm-4 col-sm-push-4'>
+                <div class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-4'>
                     <div class='well'>
                         <div> <!-- Mortgage Goal Input -->
                             <h2>Your Mortgage Goal:</h2>
