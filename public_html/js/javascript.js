@@ -30,6 +30,23 @@ $('input').on('change', function() {
       var storageValue = $(this).val();
       sessionStorage.setItem(storageKey, storageValue);
       break;
+    case 'checkbox':
+      var storageKey = $(this).attr('name');
+      if(sessionStorage.getItem(storageKey)) {
+        alert('hi');
+        var currentStorageValues = JSON.parse(sessionStorage.getItem(storageKey)); // Return the initialized array
+        var storageValue = currentStorageValues.push($(this).val());
+        alert(storageValue);
+      } else {
+        var storageValue = [$(this).val()];
+      }
+      sessionStorage.setItem(storageKey, JSON.stringify(storageValue));
+      break;
+    case 'radio':
+      var storageKey = $(this).attr('name');
+      var storageValue = $(this).val();
+      sessionStorage.setItem(storageKey, storageValue);
+      break;
   }
 });
 
@@ -47,6 +64,16 @@ for(var i = 0; i < sessionStorage.length; i++) {
   sessMsg += 'Key/Val ' + i + ': ' + sessionStorage.key(i) + ': ' + sessionStorage.getItem(sessionStorage.key(i)) + '. ';
 }
 
-alert(sessMsg);
+// Loop through the key value 'refinanceReason' specifically
+var refiReMsg = ''
+
+var refiArray = sessionStorage.getItem('refinanceReason');
+alert(refiArray.length);
+/*
+for(var i = 0; i < refiArray.length; i++) {
+  refiReMsg += 'Reason ' + i ': ' + refiArray[i] + '. ';
+}
+*/
+// alert(sessMsg);
 
 });
