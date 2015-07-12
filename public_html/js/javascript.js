@@ -22,28 +22,20 @@ $('.requiredInput').on('blur', function() {
 $('input').on('change', function() {
   var inputType = $(this).attr('type');
   switch(inputType) {
-    case 'number':
-    case 'text':
-    case 'email':
-    case 'tel':
-      var storageKey = $(this).attr('id');
-      var storageValue = $(this).val();
-      sessionStorage.setItem(storageKey, storageValue);
-      break;
     case 'checkbox':
       var storageKey = $(this).attr('name');
-      if(sessionStorage.getItem(storageKey)) {
-        alert('hi');
-        var currentStorageValues = JSON.parse(sessionStorage.getItem(storageKey)); // Return the initialized array
-        var storageValue = currentStorageValues.push($(this).val());
-        alert(storageValue);
-      } else {
-        var storageValue = [$(this).val()];
-      }
+      var storageValue = $('input[name=' + storageKey + ']:checked').map(function() {
+        return this.value;
+      }).get();
       sessionStorage.setItem(storageKey, JSON.stringify(storageValue));
       break;
     case 'radio':
       var storageKey = $(this).attr('name');
+      var storageValue = $(this).val();
+      sessionStorage.setItem(storageKey, storageValue);
+      break;
+    default:
+      var storageKey = $(this).attr('id');
       var storageValue = $(this).val();
       sessionStorage.setItem(storageKey, storageValue);
       break;
@@ -57,6 +49,9 @@ $('select').on('change', function() {
   sessionStorage.setItem(storageKey, storageValue);
 })
 
+
+// The below sections were used to test the storage of session variables:
+/*
 var sessMsg = '';
 
 // Loops through all set session keys
@@ -65,15 +60,13 @@ for(var i = 0; i < sessionStorage.length; i++) {
 }
 
 // Loop through the key value 'refinanceReason' specifically
-var refiReMsg = ''
+var refiMsg = '';
 
-var refiArray = sessionStorage.getItem('refinanceReason');
-alert(refiArray.length);
-/*
+var refiArray = JSON.parse(sessionStorage.getItem('refinanceReason'));
+alert(refiArray);
 for(var i = 0; i < refiArray.length; i++) {
-  refiReMsg += 'Reason ' + i ': ' + refiArray[i] + '. ';
+  alert(refiArray[i]);
 }
 */
-// alert(sessMsg);
 
 });
