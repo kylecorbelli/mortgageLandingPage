@@ -51,7 +51,7 @@ $('select').on('change', function() {
 
 
 // The below sections were used to test the storage of session variables:
-/*
+
 var sessMsg = '';
 
 // Loops through all set session keys
@@ -59,6 +59,9 @@ for(var i = 0; i < sessionStorage.length; i++) {
   sessMsg += 'Key/Val ' + i + ': ' + sessionStorage.key(i) + ': ' + sessionStorage.getItem(sessionStorage.key(i)) + '. ';
 }
 
+alert(sessMsg);
+
+/*
 // Loop through the key value 'refinanceReason' specifically
 var refiMsg = '';
 
