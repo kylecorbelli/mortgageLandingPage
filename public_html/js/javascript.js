@@ -17,4 +17,11 @@ $('.requiredInput').on('blur', function() {
   }
 })
 
+$('input').on('change', function() {
+  var storageKey = $(this).attr('id');
+  var storageValue = $(this).val();
+  alert('The storage key is ' + storageKey + ' and the storage value is ' + storageValue);
+  sessionStorage.setItem(storageKey, storageValue);
+});
+
 });
