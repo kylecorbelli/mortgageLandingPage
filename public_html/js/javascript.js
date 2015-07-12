@@ -17,6 +17,8 @@ $('.requiredInput').on('blur', function() {
   }
 })
 
+
+// Sets user input to session storage 
 $('input').on('change', function() {
   var inputType = $(this).attr('type');
   switch(inputType) {
@@ -31,10 +33,20 @@ $('input').on('change', function() {
   }
 });
 
+// Sets user input to session storage
 $('select').on('change', function() {
   var storageKey = $(this).attr('id');
   var storageValue = $(this).val();
   sessionStorage.setItem(storageKey, storageValue);
 })
+
+var sessMsg = '';
+
+// Loops through all set session keys
+for(var i = 0; i < sessionStorage.length; i++) {
+  sessMsg += 'Key/Val ' + i + ': ' + sessionStorage.key(i) + ': ' + sessionStorage.getItem(sessionStorage.key(i)) + '. ';
+}
+
+alert(sessMsg);
 
 });
