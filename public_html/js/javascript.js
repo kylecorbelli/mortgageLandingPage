@@ -29,14 +29,13 @@ $('input').on('change', function() {
       sessionStorage.setItem(storageKey, JSON.stringify(storageValue));
       break;
     case 'radio':
-      var checkedKey = $(this).attr('id');
-      var checkedStatus = $(this).is(':checked');
+      //var checkedKey = $(this).attr('id');
+      //var checkedStatus = $(this).is(':checked');
       var storageKey = $(this).attr('name');
-      var allNotChecked = $('input[name=' + storageKey + ']:not(:checked)');
-      sessionStorage.setItem(allNotChecked.attr('id'), false);
+      //var allNotChecked = $('input[name=' + storageKey + ']:not(:checked)');
+      //sessionStorage.setItem(allNotChecked.attr('id'), false);
       var storageValue = $(this).val();
       sessionStorage.setItem(storageKey, storageValue);
-      sessionStorage.setItem(checkedKey, checkedStatus);
       break;
     default:
       var storageKey = $(this).attr('id');
@@ -59,8 +58,8 @@ var msg = '';
 for(i = 0; i < sessionStorage.length; i++) {
   var id = sessionStorage.key(i);
   $('#' + id).val(sessionStorage.getItem(id));
-  alert(id + ': ' + sessionStorage.getItem(id));
-  $('#' + id).prop('checked', sessionStorage.getItem(id));
+  //alert(id + ': ' + sessionStorage.getItem(id));
+  //$('#' + id).prop('checked', sessionStorage.getItem(id)); // was meant to check and uncheck boxes given their state in session storage
   //msg += 'Key ' + i + ': ' + id + ', Value ' + i + ': ' + sessionStorage.getItem(id) + '. ';
 }
 /*
