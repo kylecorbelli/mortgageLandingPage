@@ -17,7 +17,7 @@
         <div id='page-wrapper' class='container-fluid'>
             <div class='row'>
                 <div class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-4'>
-                    <div class='well'>
+                    <div class='alert alert-info'>
                         <div> <!-- Mortgage Goal Input -->
                             <h2><label for='Property-Type'>Your Mortgage Goal:</label></h2>
                             <select id='Property-Type' class='form-control' name='Property-Type'>
