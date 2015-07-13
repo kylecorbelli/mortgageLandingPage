@@ -20,7 +20,6 @@ function setEventListeners() {
     $('input').on('change', function() {
         var storageKey = $(this).attr('id');
         var storageValue = $(this).val();
-        alert(storageKey + ' ' + storageValue);
         sessionStorage.setItem(storageKey, storageValue);
     });
 
@@ -28,7 +27,6 @@ function setEventListeners() {
     $('select').on('change', function() {
       var storageKey = $(this).attr('id');
       var storageValue = $(this).val();
-      alert(storageKey + ' ' + storageValue);
       sessionStorage.setItem(storageKey, storageValue);
     }); 
 }
