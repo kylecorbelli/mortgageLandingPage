@@ -1,5 +1,8 @@
 $(function() {
 
+// Loads the first page of inputs
+$('#mainInputContainer').load('data/firstQuestions.html');
+
 // Formats the user's numerical input with commas separating the thousands while they're typing it in.
 $('.numberToComma').on('keyup', function() {
   var unformattedText = $(this).val(); // Selects the input that triggered the event listener.
@@ -19,30 +22,9 @@ $('.requiredInput').on('blur', function() {
 
 // Sets user input to session storage 
 $('input').on('change', function() {
-  var inputType = $(this).attr('type');
-  switch(inputType) {
-    case 'checkbox':
-      var storageKey = $(this).attr('name');
-      var storageValue = $('input[name=' + storageKey + ']:checked').map(function() {
-        return this.value;
-      }).get();
-      sessionStorage.setItem(storageKey, JSON.stringify(storageValue));
-      break;
-    case 'radio':
-      //var checkedKey = $(this).attr('id');
-      //var checkedStatus = $(this).is(':checked');
-      var storageKey = $(this).attr('name');
-      //var allNotChecked = $('input[name=' + storageKey + ']:not(:checked)');
-      //sessionStorage.setItem(allNotChecked.attr('id'), false);
-      var storageValue = $(this).val();
-      sessionStorage.setItem(storageKey, storageValue);
-      break;
-    default:
-      var storageKey = $(this).attr('id');
-      var storageValue = $(this).val();
-      sessionStorage.setItem(storageKey, storageValue);
-      break;
-  }
+    var storageKey = $(this).attr('id');
+    var storageValue = $(this).val();
+    sessionStorage.setItem(storageKey, storageValue);
 });
 
 // Sets user input to session storage
