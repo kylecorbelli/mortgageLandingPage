@@ -29,25 +29,32 @@ function setEventListeners() {
       var storageValue = $(this).val();
       sessionStorage.setItem(storageKey, storageValue);
     }); 
-    
-    // Takes user to second set of inputs upon clicking the button
-    $('#firstButton').on('click', function() {
-        $('#mainInputContainer').load('data/secondQuestions.html', function() {
-            setEventListeners();
-            fillSessionVariables();
-        });
+
+    // Sets up buttons to load next set of inputs and update the history stack
+    $('button').on('click', function() {
+        var href = $(this).attr('data-href');
+        loadContent(href);
+        history.pushState('', '', href);
     });
     
-    // Takes user to third set of inputs upon clicking the button
-    $('#secondButton').on('click', function() {
-        $('#mainInputContainer').load('data/thirdQuestions.html', function() {
-            setEventListeners();
-            fillSessionVariables();
-        });
+    // Handles back/forward buttons
+    window.onpopstate = function() {
+        var path = location.pathname;
+        loadContent(path);
+    };
+}
+
+// Sets event listeners on initial page load
+setEventListeners();
+
+// Function for AJAX calls
+function loadContent(url) {
+    $('#mainInputContainer').load(url, function() {
+        setEventListeners();
+        fillSessionVariables();
     });
 }
 
-setEventListeners();
 
 // Autopopulate fields from session storage
 function fillSessionVariables() {
