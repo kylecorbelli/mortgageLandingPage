@@ -34,14 +34,7 @@ function setEventListeners() {
     $('button').on('click', function() {
         var href = $(this).attr('data-href');
         loadContent(href);
-        history.pushState('', '', href);
     });
-    
-    // Handles back/forward buttons
-    window.onpopstate = function() {
-        var path = location.pathname;
-        loadContent(path);
-    };
 }
 
 // Sets event listeners on initial page load
@@ -52,6 +45,7 @@ function loadContent(url) {
     $('#mainInputContainer').load(url, function() {
         setEventListeners();
         fillSessionVariables();
+        $(window).scrollTop(0);
     });
 }
 
