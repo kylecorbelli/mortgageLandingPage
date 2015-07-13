@@ -6,16 +6,16 @@ $('#mainInputContainer').load('data/firstQuestions.html', function() {
     fillSessionVariables();
 });
 
-// Adds error styling if the user has focused on and then skipped a required input
-$('.requiredInput').on('blur', function() {
-  if(!this.value) {
-    $(this).parent().parent().addClass('has-error');
-  } else {
-    $(this).parent().parent().removeClass('has-error');
-  }
-});
-
 function setEventListeners() {
+    // Adds error styling if the user has focused on and then skipped a required input
+    $('.requiredInput').on('blur', function() {
+      if(!this.value) {
+        $(this).parent().parent().addClass('has-error');
+      } else {
+        $(this).parent().parent().removeClass('has-error');
+      }
+    });
+    
     // Sets user input to session storage 
     $('input').on('change', function() {
         var storageKey = $(this).attr('id');
