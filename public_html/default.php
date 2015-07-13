@@ -16,7 +16,7 @@
     <body>
         <div id='page-wrapper' class='container-fluid'>
             <div class='row'>
-                <div id='mainInputContainer' class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-4'>
+                <div id='mainInputContainer' class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-8'>
                     
                 </div>
             </div>
