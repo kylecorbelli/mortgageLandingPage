@@ -29,6 +29,14 @@ function setEventListeners() {
       var storageValue = $(this).val();
       sessionStorage.setItem(storageKey, storageValue);
     }); 
+    
+    // Takes user to second set of inputs upon clicking the button
+    $('#firstButton').on('click', function() {
+        $('#mainInputContainer').load('data/secondQuestions.html', function() {
+            setEventListeners();
+            fillSessionVariables();
+        });
+    });
 }
 
 setEventListeners();
