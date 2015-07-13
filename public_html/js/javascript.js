@@ -1,14 +1,9 @@
 $(function() {
 
 // Loads the first page of inputs
-$('#mainInputContainer').load('data/firstQuestions.html');
-
-// Formats the user's numerical input with commas separating the thousands while they're typing it in.
-$('.numberToComma').on('keyup', function() {
-  var unformattedText = $(this).val(); // Selects the input that triggered the event listener.
-  noCommaText = unformattedText.replace(/,/g, ''); // Strips out all existing commas.
-  formattedText = noCommaText.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // Adds commas when numerical characters are followed by exactly three consecutive numerical characters.
-  $(this).val(formattedText).trigger('change'); // Replaces the input field's value with the newly-formatted string.
+$('#mainInputContainer').load('data/firstQuestions.html', function() {
+    setEventListeners();
+    fillSessionVariables();
 });
 
 // Adds error styling if the user has focused on and then skipped a required input
@@ -20,35 +15,34 @@ $('.requiredInput').on('blur', function() {
   }
 });
 
-// Sets user input to session storage 
-$('input').on('change', function() {
-    var storageKey = $(this).attr('id');
-    var storageValue = $(this).val();
-    sessionStorage.setItem(storageKey, storageValue);
-});
+function setEventListeners() {
+    // Sets user input to session storage 
+    $('input').on('change', function() {
+        var storageKey = $(this).attr('id');
+        var storageValue = $(this).val();
+        alert(storageKey + ' ' + storageValue);
+        sessionStorage.setItem(storageKey, storageValue);
+    });
 
-// Sets user input to session storage
-$('select').on('change', function() {
-  var storageKey = $(this).attr('id');
-  var storageValue = $(this).val();
-  sessionStorage.setItem(storageKey, storageValue);
-});
+    // Sets user input to session storage
+    $('select').on('change', function() {
+      var storageKey = $(this).attr('id');
+      var storageValue = $(this).val();
+      alert(storageKey + ' ' + storageValue);
+      sessionStorage.setItem(storageKey, storageValue);
+    }); 
+}
 
-var msg = '';
+setEventListeners();
 
 // Autopopulate fields from session storage
-for(i = 0; i < sessionStorage.length; i++) {
-  var id = sessionStorage.key(i);
-  $('#' + id).val(sessionStorage.getItem(id));
-  //alert(id + ': ' + sessionStorage.getItem(id));
-  //$('#' + id).prop('checked', sessionStorage.getItem(id)); // was meant to check and uncheck boxes given their state in session storage
-  //msg += 'Key ' + i + ': ' + id + ', Value ' + i + ': ' + sessionStorage.getItem(id) + '. ';
+function fillSessionVariables() {
+    for(i = 0; i < sessionStorage.length; i++) {
+        var id = sessionStorage.key(i);
+        $('#' + id).val(sessionStorage.getItem(id));
+    }
 }
-/*
-$('#VA-No').prop('checked', true);
-$('#VA-Yes').prop('checked', false);
-*/
 
-//alert(msg);
+fillSessionVariables();
 
 });
