@@ -37,6 +37,14 @@ function setEventListeners() {
             fillSessionVariables();
         });
     });
+    
+    // Takes user to third set of inputs upon clicking the button
+    $('#secondButton').on('click', function() {
+        $('#mainInputContainer').load('data/thirdQuestions.html', function() {
+            setEventListeners();
+            fillSessionVariables();
+        });
+    });
 }
 
 setEventListeners();
