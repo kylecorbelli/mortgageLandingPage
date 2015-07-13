@@ -18,10 +18,10 @@
             <div class='row'>
                 <div class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-4'>
                     <div class='alert alert-info'>
-                        <div> <!-- Mortgage Goal Input -->
-                            <h2><label for='Property-Type'>Your Mortgage Goal:</label></h2>
-                            <select id='Property-Type' class='form-control' name='Property-Type'>
-                                <option hidden disable selected>-Select One-</option>
+                        <div class='form-group'> <!-- Mortgage Goal Input -->
+                            <h2><label for='Mortgage-Goal'>Your Mortgage Goal:</label></h2>
+                            <select id='Morgage-Goal' class='form-control' name='Mortgage-Goal'>
+                                <option value='undefined' hidden disable selected>-Select One-</option>
                                 <option value='Lower-My-Payments-Every-Month'>Lower My Payments Every Month</option>
                                 <option value='Pay-Off-My-Other-Debts'>Pay Off My Other Debts</option>
                                 <option value='Pay-My-Mortgage-Off-Sooner'>Pay My Mortgage Off Sooner</option>
@@ -31,7 +31,7 @@
                         <div class='form-group'> <!-- Property Type Input -->
                             <h2><label for='Property-Type'>Property Type:</label></h2>
                             <select id='Property-Type' class='form-control' name='Property-Type'>
-                                <option hidden disable selected>-Select One-</option>
+                                <option value='undefined' hidden disable selected>-Select One-</option>
                                 <option value='Single-Family-Detached-House'>Single-Family Detached House</option>
                                 <option value='Condominium'>Condominium</option>
                                 <option value='Townhouse'>Townhouse</option>
@@ -42,7 +42,7 @@
                         <div class='form-group'> <!-- Occupancy Input -->
                             <h2><label for='Occupancy-Type'>Occupancy Type:</label></h2>
                             <select id='Occupancy-Type' class='form-control' name='Occupancy-Type'>
-                                <option hidden disable selected>-Select One-</option>
+                                <option value='undefined' hidden disable selected>-Select One-</option>
                                 <option value='Owner-Occupied'>Owner-Occupied</option>
                                 <option value='Vacation-Second-Home'>Vacation / Second Home</option>
                                 <option value='Income-Investment-Property'>Income / Investment Property</option>
@@ -218,19 +218,60 @@
                         </div> <!-- END Mortgage Balance Input -->
                         <div class='form-group requiredInput'> <!-- Cash Out Input -->
                             <h2><label for='Cash-Out'>Desired Cash Out</label></h2>
-                            <div class='input-group'>
-                                <span class='input-group-addon'>$</span>
-                                <input id='Cash-Out' class='form-control numberToComma requiredInput' type='text' name='Cash-Out'/>
-                                <span class='input-group-addon'>.00</span>
-                            </div>
+                            <select id='Cash-Out' class='form-control' name='Cash-Out'>
+                                <option value='undefined' selected disabled hidden>-Select One-</option>
+                                <option value='0'>0</option>
+                                <option value='1,000 - 10,000'>1,000 - 10,000</option>
+                                <option value='10,001 - 20,000'>10,001 - 20,000</option>
+                                <option value='20,001 - 30,000'>20,001 - 30,000</option>
+                                <option value='30,001 - 40,000'>30,001 - 40,000</option>
+                                <option value='40,001 - 50,000'>40,001 - 50,000</option>
+                                <option value='50,001 - 60,000'>50,001 - 60,000</option>
+                                <option value='60,001 - 70,000'>60,001 - 70,000</option>
+                                <option value='70,001 - 80,000'>70,001 - 80,000</option>
+                                <option value='80,001 - 90,000'>80,001 - 90,000</option>
+                                <option value='90,001 - 100,000'>90,001 - 100,000</option>
+                                <option value='100,001 - 110,000'>100,001 - 110,000</option>
+                                <option value='110,001 - 120,000'>110,001 - 120,000</option>
+                                <option value='120,001 - 130,000'>120,001 - 130,000</option>
+                                <option value='130,001 - 140,000'>130,001 - 140,000</option>
+                                <option value='140,001 - 150,000'>140,001 - 150,000</option>
+                                <option value='150,001 - 160,000'>150,001 - 160,000</option>
+                                <option value='160,001 - 170,000'>160,001 - 170,000</option>
+                                <option value='170,001 - 180,000'>170,001 - 180,000</option>
+                                <option value='180,001 - 190,000'>180,001 - 190,000</option>
+                                <option value='190,001 - 200,000'>190,001 - 200,000</option>
+                                <option value='200,000+'>200,000+</option>
+                            </select>
                         </div> <!-- END Cash Out Input -->
-                        <div class='form-group'> <!-- Current Rate Input -->
+<!--                        
+                        <div class='form-group'> <!-- Current Rate Input --> <!--
                             <h2><label for='First-Mortgage-Rate'>First Mortgage Interest Rate</label></h2>
-                            <div class='input-group'>
-                                <input id='First-Mortgage-Rate' class='form-control requiredInput' type='number' name='First-Mortgage-Rate'/>
-                                <span class='input-group-addon'>%</span>
-                            </div>
+                            <select id='First-Mortgage-Rate' class='form-control' name='First-Mortgage-Rate'>
+                                <option value='undefined' hidden disable selected>-Select One-</option>
+                                <option value='0.000\% - 1.000\%'>0.000% - 0.500%</option>
+                                <option value='0.000\% - 1.000\%'>0.625% - 1.000%</option>
+                                <option value='1.125\% - 1.500\%'>1.125% - 1.500%</option>
+                                <option value='1.625\% - 2.000\%'>1.625% - 2.000%</option>
+                                <option value='2.125\% - 2.500\%'>2.125% - 2.500%</option>
+                                <option value='2.625\% - 3.000\%'>2.625% - 3.000%</option>
+                                <option value='3.125\% - 3.500\%'>3.125% - 3.500%</option>
+                                <option value='3.625\% - 4.000\%'>3.625% - 4.000%</option>
+                                <option value='4.125\% - 4.500\%'>4.125% - 4.500%</option>
+                                <option value='4.625\% - 5.000\%'>4.625% - 5.000%</option>
+                                <option value='5.125\% - 5.500\%'>5.125% - 5.500%</option>
+                                <option value='5.625\% - 6.000\%'>5.625% - 6.000%</option>
+                                <option value='6.125\% - 6.500\%'>6.125% - 6.500%</option>
+                                <option value='6.625\% - 7.000\%'>6.625% - 7.000%</option>
+                                <option value='7.125\% - 7.500\%'>7.125% - 7.500%</option>
+                                <option value='7.625\% - 8.000\%'>7.625% - 8.000%</option>
+                                <option value='8.125\% - 8.500\%'>8.125% - 8.500%</option>
+                                <option value='8.625\% - 9.000\%'>8.625% - 9.000%</option>
+                                <option value='9.125\% - 9.500\%'>9.125% - 9.500%</option>
+                                <option value='9.625\% - 10.000\%'>9.625% - 10.000%</option>
+                            </select>
                         </div> <!-- END Current Rate Input -->
+
                         <div class='form-group'> <!-- VA Eligibility Input -->
                             <h2><label for='VA-Eligible'>Are You a Veteran?</label></h2>
                             <select id='VA-Eligible' class='form-control' name='VA-Eligible'>
@@ -243,7 +284,7 @@
                             <h2><label for='Credit'>How is Your Credit?</label></h2>
                             <select id='Credit' class='form-control' name='Credit'>
                                 <option value='undefined' hidden disable selected>-Select One-</option>
-                                <option value='Excellent-720-or-Above'>Excellent (720 or Above)</option>
+                                <option value='Excellent-720-and-Above'>Excellent (720 and Above)</option>
                                 <option value='Good-660-719'>Good (660 - 719)</option>
                                 <option value='Average-620-659'>Average (620 - 659)</option>
                                 <option value='Below-Average-580-619'>Below Average (580 - 619)</option>
