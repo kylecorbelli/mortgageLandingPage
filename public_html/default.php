@@ -15,6 +15,10 @@
     ?>
     <body>
         <div id='page-wrapper' class='container-fluid'>
+            <?PHP
+                include 'include/logoHeader.php'
+            ?>
+            <!-- Main Content -->
             <div class='row'>
                 <div class='col-sm-6 col-sm-push-3 col-md-4 col-md-push-8'>
                     <div id='mainInputContainer' class='well'></div>
