@@ -53,10 +53,15 @@
 
 <body>
     <div id='page-wrapper' class='container-fluid'>
+        <?PHP
+            include 'include/logoHeader.php'
+        ?>
         <div class='row'>
-            <div class='col-md-4 col-md-push-4'>
+            <div class='col-sm-6 col-sm-push-3'>
                 <div class='well'>
-                    Now, here's some content!
+                    <h1>Thank You for Contacting Ideal Home Loans!</h1>
+                    <p>Congratulations! You've just taken the first step toward a new mortgage.</p>
+                    <p>A dedicated Home Loan Expert will be calling you to match you with a personalized loan to meet your goals.</p>
                 </div>
             </div>
         </div>
