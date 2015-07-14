@@ -34,7 +34,7 @@ function setEventListeners() {
     $('button').on('click', function() {
         var href = $(this).attr('data-href');
         loadContent(href);
-    });
+    });    
 }
 
 // Sets event listeners on initial page load
