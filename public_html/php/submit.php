@@ -15,7 +15,7 @@ $phone = $_POST['Phone'];
 
 
 $to = 'kyle.corbelli@gmail.com';
-$subject = 'You Have a New Lead: ' . $firstName . $lastName;
+$subject = 'You Have a New Lead: ' . $firstName . ' ' . $lastName;
 $message = '<h3>Congratulations! You have a new lead! Here are the details:</h3>';
 $message .= 'Mortgage Goal: ' . $mortgageGoal . '<br />';
 $message .= 'Loan Balance: ' . $loanBalance . '<br />';
