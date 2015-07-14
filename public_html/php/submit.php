@@ -1,36 +1,50 @@
 <?PHP
 
+    include '../include/connection.php';
 
-$mortgageGoal = $_POST['Mortgage-Goal'];
-$loanBalance = $_POST['Loan-Balance'];
-$cashOut = $_POST['Cash-Out'];
-$propertyValue = $_POST['Property-Value'];
-$credit = $_POST['Credit'];
-$vaEligible = $_POST['VA-Eligible'];
-$firstName = $_POST['First-Name'];
-$lastName = $_POST['Last-Name'];
-$zipCode = $_POST['Zip-Code'];
-$email = $_POST['Email'];
-$phone = $_POST['Phone'];
+    $mortgageGoal = $_POST['Mortgage-Goal'];
+    $loanBalance = $_POST['Loan-Balance'];
+    $cashOut = $_POST['Cash-Out'];
+    $propertyValue = $_POST['Property-Value'];
+    $credit = $_POST['Credit'];
+    $vaEligible = $_POST['VA-Eligible'];
+    $firstName = $_POST['First-Name'];
+    $lastName = $_POST['Last-Name'];
+    $zipCode = $_POST['Zip-Code'];
+    $email = $_POST['Email'];
+    $phone = $_POST['Phone'];
 
+    $date = date('Y-m-d');
 
-$to = 'kyle.corbelli@gmail.com';
-$subject = 'You Have a New Lead: ' . $firstName . ' ' . $lastName;
-$message = '<h3>Congratulations! You have a new lead! Here are the details:</h3>';
-$message .= 'Mortgage Goal: ' . $mortgageGoal . '<br />';
-$message .= 'Loan Balance: ' . $loanBalance . '<br />';
-$message .= 'Cash Out: ' . $cashOut . '<br />';
-$message .= 'Property Value: ' . $propertyValue . '<br />';
-$message .= 'Credit: ' . $credit . '<br />';
-$message .= 'VA Eligible: ' . $vaEligible . '<br />';
-$message .= 'First Name: ' . $firstName . '<br />';
-$message .= 'Last Name: ' . $lastName . '<br />';
-$message .= 'Zip Code: ' . $zipCode . '<br />';
-$message .= 'Email: ' . $email . '<br />';
-$message .= 'Phone: ' . $phone . '<br />';
+    $createQuery = "
+        INSERT INTO `Leads`(`Mortgage Goal`, `Approximate Mortgage Balance`, `Cash Out Requested`, `Estimated Property Value`, `Credit`, `VA Eligible`, `First Name`, `Last Name`, `Zip Code`, `Email`, `Phone`, `Date Added`)
+        VALUES('$mortgageGoal', '$loanBalance', '$cashOut', '$propertyValue', '$credit', '$vaEligible', '$firstName', '$lastName', '$zipCode', '$email', '$phone', '$date')
+    ";
 
-mail($to, $subject, $message);
+    mysql_query($createQuery) or die(mysql_error());
 
-echo 'You should be receiving an email shortly. Well done, software engineer!';
+    $to = 'kyle.corbelli@gmail.com';
+    $subject = 'You Have a New Lead: ' . $firstName . ' ' . $lastName;
+
+    $headers = 'Content-Type: text/html';
+
+    $message = '<h3>Congratulations! You have a new lead! Here are the details:</h3>';
+    $message .= '<table>';
+    $message .= '<tr><td>Mortgage Goal:</td><td>' . $mortgageGoal . '</td></tr>';
+    $message .= '<tr><td>Loan Balance:</td><td>' . $loanBalance . '</td></tr>';
+    $message .= '<tr><td>Cash Out:</td><td>' . $cashOut . '<br />';
+    $message .= '<tr><td>Property Value:</td><td>' . $propertyValue . '</td></tr>';
+    $message .= '<tr><td>Credit:</td><td>' . $credit . '<br />';
+    $message .= '<tr><td>VA Eligible:</td><td>' . $vaEligible . '</td></tr>';
+    $message .= '<tr><td>First Name:</td><td>' . $firstName . '</td></tr>';
+    $message .= '<tr><td>Last Name:</td><td>' . $lastName . '</td></tr>';
+    $message .= '<tr><td>Zip Code:</td><td>' . $zipCode . '</td></tr>';
+    $message .= '<tr><td>Email:</td><td>' . $email . '</td></tr>';
+    $message .= '<tr><td>Phone:</td><td>' . $phone . '</td></tr>';
+    $message .= '</table>';
+
+    mail($to, $subject, $message, $headers);
+
+    echo 'You should be receiving an email shortly. Well done, software engineer!';
 
 ?>
