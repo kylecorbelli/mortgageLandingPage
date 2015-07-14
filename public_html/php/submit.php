@@ -1,5 +1,6 @@
 <?PHP
 
+
 $mortgageGoal = $_POST['Mortgage-Goal'];
 $loanBalance = $_POST['Loan-Balance'];
 $cashOut = $_POST['Cash-Out'];
@@ -13,17 +14,23 @@ $email = $_POST['Email'];
 $phone = $_POST['Phone'];
 
 
-echo 'Mortgage Goal: ' . $mortgageGoal . '<br />';
-echo 'Loan Balance: ' . $loanBalance . '<br />';
-echo 'Cash Out: ' . $cashOut . '<br />';
-echo 'Property Value: ' . $propertyValue . '<br />';
-echo 'Credit: ' . $credit . '<br />';
-echo 'VA Eligible: ' . $vaEligible . '<br />';
-echo 'First Name: ' . $firstName . '<br />';
-echo 'Last Name: ' . $lastName . '<br />';
-echo 'Zip Code: ' . $zipCode . '<br />';
-echo 'Phone: ' . $phone . '<br />';
+$to = 'kyle.corbelli@gmail.com';
+$subject = 'You Have a New Lead: ' . $firstName . $lastName;
+$message = '<h3>Congratulations! You have a new lead! Here are the details:</h3>';
+$message .= 'Mortgage Goal: ' . $mortgageGoal . '<br />';
+$message .= 'Loan Balance: ' . $loanBalance . '<br />';
+$message .= 'Cash Out: ' . $cashOut . '<br />';
+$message .= 'Property Value: ' . $propertyValue . '<br />';
+$message .= 'Credit: ' . $credit . '<br />';
+$message .= 'VA Eligible: ' . $vaEligible . '<br />';
+$message .= 'First Name: ' . $firstName . '<br />';
+$message .= 'Last Name: ' . $lastName . '<br />';
+$message .= 'Zip Code: ' . $zipCode . '<br />';
+$message .= 'Email: ' . $email . '<br />';
+$message .= 'Phone: ' . $phone . '<br />';
 
+mail($to, $subject, $message);
 
+echo 'You should be receiving an email shortly. Well done, software engineer!';
 
 ?>
