@@ -7,6 +7,7 @@
         <option value='Pay My Mortgage Off Sooner'>Pay My Mortgage Off Sooner</option>
         <option value='Get Cash in My Hand'>Get Cash in My Hand</option>
     </select>
+    <div id='goalError' class='red-text hiddenContent'>*Please select a mortgage goal</div>
 </div> <!-- END Mortgage Goal Input -->
 <div class='form-group'> <!-- Mortgage Balance Input -->
     <h3><label for='Loan-Balance'>Approximate Mortgage Balance:</label></h3>
@@ -91,6 +92,7 @@
         <option value='6,800,001 - 7,000,000'>6,800,001 - 7,000,000</option>
         <option value='7,000,000+'>7,000,000+</option>
     </select>
+    <div id='balanceError' class='red-text hiddenContent'>*Please select an approximate mortgage balance.</div>
 </div> <!-- END Mortgage Balance Input -->
 <div class='form-group requiredInput'> <!-- Cash Out Input -->
     <h3><label for='Cash-Out'>Desired Cash Out:</label></h3>
@@ -119,5 +121,6 @@
         <option value='190,001 - 200,000'>190,001 - 200,000</option>
         <option value='200,000+'>200,000+</option>
     </select>
+    <div id='cashOutError' class='red-text hiddenContent'>*Please select an amount of cash out desired.</div>
 </div> <!-- END Cash Out Input -->
-<button id='firstNextButton' class='btn btn-default form-control' type='button' data-href='data/secondQuestions.html'>Get Started</button>
+<button id='firstNextButton' class='btn btn-default form-control' type='button'>Get Started</button>
