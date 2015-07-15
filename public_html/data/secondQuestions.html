@@ -81,6 +81,7 @@
         <option value='6,800,001 - 7,000,000'>6,800,001 - 7,000,000</option>
         <option value='7,000,000+'>7,000,000+</option>
     </select>
+    <div id='propertyValueError' class='red-text hiddenContent'>*Please select an estimated property value.</div>
 </div> <!-- END Property Value Input -->
 <div class='form-group'> <!-- Credit Input -->
     <h3><label for='Credit'>How is Your Credit?</label></h3>
@@ -92,6 +93,7 @@
         <option value='Below Average: (580-619)'>Below Average (580 - 619)</option>
         <option value='Poor: 579 and Below'>Poor (579 and Below)</option>
     </select>
+    <div id='creditError' class='red-text hiddenContent'>*Please select a credit range.</div>
 </div> <!-- END Credit Input -->
 <div class='form-group'> <!-- VA Eligibility Input -->
     <h3><label for='VA-Eligible'>Are You a Veteran?</label></h3>
@@ -100,10 +102,11 @@
         <option value='Yes'>Yes</option>
         <option value='No'>No</option>
     </select>
+    <div id='vaError' class='red-text hiddenContent'>*Please select your VA eligibility.</div>
 </div> <!-- END VA Eligibility Input -->
 <div class='row'>
     <div class='col-xs-6'>
-        <button id='secondPrevButton' class='btn btn-default form-control' type='button' data-href='data/firstQuestions.html'>Back</button>
+        <button id='secondPrevButton' class='btn btn-default form-control backButton' type='button' data-href='data/firstQuestions.html'>Back</button>
     </div>
     <div class='col-xs-6'>
         <button id='secondNextButton' class='btn btn-default form-control' type='button' data-href='data/thirdQuestions.html'>Next</button>
