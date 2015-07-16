@@ -217,36 +217,41 @@
         <h3><label for='First-Name'>First Name:</label></h3>
         <div class='input-group'>
             <span class='input-group-addon'><span class='glyphicon glyphicon-pencil'></span></span>
-            <input id='First-Name' class='form-control requiredInput' type='text' name='First-Name' />
+            <input id='First-Name' class='form-control namePattern' type='text' name='First-Name' />
         </div>
+        <div id='firstNameError' class='red-text hiddenContent'>*Please a valid first name.</div>
     </div> <!-- END First Name Input -->
     <div class='form-group'> <!-- Last Name Input -->
         <h3><label for='Last-Name'>Last Name:</label></h3>
         <div class='input-group'>
             <span class='input-group-addon'><span class='glyphicon glyphicon-pencil'></span></span>
-            <input id='Last-Name' class='form-control requiredInput' type='text' name='Last-Name' />
+            <input id='Last-Name' class='form-control namePattern' type='text' name='Last-Name' />
         </div>
+        <div id='lastNameError' class='red-text hiddenContent'>*Please input a valid last name.</div>
     </div> <!-- END Last Name Input -->
     <div class='form-group'> <!-- Zip Code Input -->
         <h3><label for='Zip-Code'>Zip Code:</label></h3>
         <div class='input-group'>
             <span class='input-group-addon'><span class='glyphicon glyphicon-home'></span></span>
-            <input id='Zip-Code' class='form-control requiredInput' type='number' name='Zip-Code'/>
+            <input id='Zip-Code' class='form-control zipPattern' type='text' name='Zip-Code' maxlength='5' />
         </div>
+        <div id='zipCodeError' class='red-text hiddenContent'>*Please input a valid zip code for the subject property.</div>
     </div> <!-- END Zip Code Input -->
     <div class='form-group'> <!-- Email Input -->
         <h3><label for='Email'>Email:</label></h3>
         <div class='input-group'>
             <span class='input-group-addon'><span class='glyphicon glyphicon-envelope'></span></span>
-            <input id='Email' class='form-control requiredInput' type='email' name='Email' />
+            <input id='Email' class='form-control emailPattern' type='email' name='Email' />
         </div>
+        <div id='emailError' class='red-text hiddenContent'>*Please input a valid email.</div>
     </div> <!-- END Email Input -->
     <div class='form-group'> <!-- Phone Input -->
         <h3><label for='Phone'>Phone:</label></h3>
         <div class='input-group'>
             <span class='input-group-addon'><span class='glyphicon glyphicon-phone'></span></span>
-            <input id='Phone' class='form-control requiredInput' type='tel' name='Phone' />
+            <input id='Phone' class='form-control phonePattern' type='tel' name='Phone' maxlength='10' />
         </div>
+        <div id='phoneError' class='red-text hiddenContent'>*Please input a valid phone number.</div>
     </div> <!-- END Phone Input -->
     <div class='row'>
         <div class='col-xs-6'>
