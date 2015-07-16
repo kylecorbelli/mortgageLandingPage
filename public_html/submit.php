@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
     <?PHP
 
@@ -13,17 +13,77 @@
             echo "<p class='red-text'>You forgot to select your mortgage goal!</p>";
         }
         
-        $loanBalance = $_POST['Loan-Balance'];
-        $cashOut = $_POST['Cash-Out'];
-        $propertyValue = $_POST['Property-Value'];
-        $credit = $_POST['Credit'];
-        $vaEligible = $_POST['VA-Eligible'];
-        $firstName = $_POST['First-Name'];
-        $lastName = $_POST['Last-Name'];
-        $zipCode = $_POST['Zip-Code'];
-        $email = $_POST['Email'];
-        $phone = $_POST['Phone'];
-
+        if(!empty($_POST['Loan-Balance'])) {
+            $loanBalance = $_POST['Loan-Balance'];
+        } else {
+            $loanBalance= NULL;
+            echo "<p class='red-text'>You forgot to select your approximate mortgage balance!</p>";
+        }
+        
+        if(!empty($_POST['Cash-Out'])) {
+            $cashOut = $_POST['Cash-Out'];
+        } else {
+            $cashOut = NULL;
+            echo "<p class='red-text'>You forgot to select your desired cash out!</p>";
+        }
+        
+        if(!empty($_POST['Property-Value'])) {
+            $propertyValue = $_POST['Property-Value'];
+        } else {
+            $propertyValue = NULL;
+            echo "<p class='red-text'>You forgot to select your estimated property value!</p>";
+        }
+        
+        if(!empty($_POST['Credit'])) {
+            $credit = $_POST['Credit'];
+        } else {
+            $credit = NULL;
+            echo "<p class='red-text'>You forgot to select your credit score range!</p>";
+        }
+        
+        if(!empty($_POST['VA-Eligible'])) {
+            $vaEligible = $_POST['VA-Eligible'];
+        } else {
+            $vaEligible = NULL;
+            echo "<p class='red-text'>You forgot to select your VA eligibility!</p>";
+        }
+        
+        if(!empty($_POST['First-Name'])) {
+            $firstName = $_POST['First-Name'];
+        } else {
+            $firstName = NULL;
+            echo "<p class='red-text'>You forgot to enter your first name!</p>";
+        }
+        
+        if(!empty($_POST['Last-Name'])) {
+            $lastName = $_POST['Last-Name'];
+        } else {
+            $lastName = NULL;
+            echo "<p class='red-text'>You forgot to enter your last name!</p>";
+        }
+        
+        if(!empty($_POST['Zip-Code'])) {
+            $zipCode = $_POST['Zip-Code'];
+        } else {
+            $zipCode = NULL;
+            echo "<p class='red-text'>You forgot to enter the zip code for the property!</p>";
+        }
+        
+        if(!empty($_POST['Email'])) {
+            $email = $_POST['Email'];
+        }
+        else {
+            $email = NULL;
+            echo "<p class='red-text'>You forgot to enter your email address!</p>";
+        }
+        
+        if(!empty($_POST['Phone'])) {
+            $phone = $_POST['Phone'];
+        } else {
+            $phone = NULL;
+            echo "<p class='red-text'>You forgot to enter your phone number!</p>";
+        }
+        
         date_default_timezone_set('America/Los_Angeles');
         $date = date('Y-m-d h:i:sa');
 
