@@ -4,8 +4,15 @@
 
         include 'include/connection.php';
         include 'include/head.php';
-
-        $mortgageGoal = $_POST['Mortgage-Goal'];
+        
+        // Validate the inputs in case user has JavaScript disabled
+        if(!empty($_POST['Mortgage-Goal'])) {
+            $mortgageGoal = $_POST['Mortgage-Goal'];
+        } else {
+            $mortgageGoal = NULL;
+            echo "<p class='red-text'>You forgot to select your mortgage goal!</p>";
+        }
+        
         $loanBalance = $_POST['Loan-Balance'];
         $cashOut = $_POST['Cash-Out'];
         $propertyValue = $_POST['Property-Value'];
